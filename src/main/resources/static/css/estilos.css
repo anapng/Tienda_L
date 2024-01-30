@@ -15,14 +15,53 @@ body{
     padding: 80px 20px 0;
 }
 
-header{
+.encabezado{
     position: fixed;
-    background-color: blue;
+    background-color: #076AF0;
     top: 0;
     left: 0;
-    height: 80px;
+    height: 90px;
     width: 100%;
 }
+
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 90px;    
+}
+
+.nav-menu{
+    display: flex;
+    font-size: 18px;
+    line-height: 90px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    margin: 0 10px;
+}
+
+nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+nav-menu-link:hover{
+    background-color: black;
+}   
 
 aside{
     position: fixed;
@@ -51,17 +90,6 @@ footer{
     bottom: 0;
     right: 0;
     height: 20px;
-}
-
-nav a{
-    text-decoration: none;
-    background-color: blue;
-    color: lightblue;
-}
-
-nav a:hover {
-    background-color: blue;
-    color: white;
 }
 
 tr:nth-child(odd) {
