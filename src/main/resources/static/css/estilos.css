@@ -9,9 +9,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 body{
     box-sizing: border-box;
-    background:#ccccff;
+    background:#ffffff;
     margin: 0;
-    front-family: sans-serif;
+    font-family: monospace;
     padding: 80px 20px 0;
 }
 
@@ -20,7 +20,7 @@ body{
     background-color: #076AF0;
     top: 0;
     left: 0;
-    height: 90px;
+    height: 500px;
     width: 100%;
 }
 
@@ -89,15 +89,5 @@ footer{
     left: 0;
     bottom: 0;
     right: 0;
-    height: 20px;
-}
-
-tr:nth-child(odd) {
-    background-color: lightpink;
-    color: black;
-}
-
-tr:nth-child(even) {
-    background-color: lightblue;
-    color: black;
+    height: 40px;
 }
