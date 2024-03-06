@@ -5,16 +5,41 @@ import com.tienda_L.domain.Categoria;
 import com.tienda_L.service.CategoriaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Service
 public class CategoriaServiceImpl implements CategoriaService {
-    
+
     @Autowired
     private CategoriaDao categoriaDao;
-    
+
     @Override
-    public List<Categoria> getCategorias(boolean activos){
-    return categoriaDao.findAll();
+    @Transactional(readOnly = true)
+    public List<Categoria> getCategorias(boolean activos) {
+        var lista = categoriaDao.findAll();
+        if (activos) {
+            lista.removeIf(c -> !c.isActivo());
+            //c -> !c.isActivo() es un predicado, lo que dice es [Se le pueden poner cualquier letra] que remueva todos los elementos no activos que esten en get categoria
+        }
+        return lista;
     }
 
-    
+    @Override
+    @Transactional(readOnly = true)
+    public Categoria getCategoria(Categoria categoria) {
+        return categoriaDao.findById(categoria.getIdCategoria()).orElse(null);
+    }
+
+    @Override
+    @Transactional
+    public void save(Categoria categoria) {
+        categoriaDao.save(categoria);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Categoria categoria) {
+        categoriaDao.delete(categoria);
+    }
 }
