@@ -20,7 +20,6 @@ public class CategoriaServiceImpl implements CategoriaService {
         var lista = categoriaDao.findAll();
         if (activos) {
             lista.removeIf(c -> !c.isActivo());
-            //c -> !c.isActivo() es un predicado, lo que dice es [Se le pueden poner cualquier letra] que remueva todos los elementos no activos que esten en get categoria
         }
         return lista;
     }

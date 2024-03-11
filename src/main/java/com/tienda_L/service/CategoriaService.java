@@ -1,26 +1,20 @@
 package com.tienda_L.service;
 
-import com.tienda_L.dao.CategoriaDao;
 import com.tienda_L.domain.Categoria;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 
-public interface CategoriaService { //SEMANA 6
-
-    //Se obtiene un arraylist de objetos tipo Categoria
-    public List<Categoria>getCategorias(boolean activos);
-           
-    //Se obtiene un objeto categoria a partir del
-    //idCategoria que nos pasan
+public interface CategoriaService {
+    
+    // Se obtiene un listado de categorias en un List
+    public List<Categoria> getCategorias(boolean activos);
+    
+   // Se obtiene un Categoria, a partir del id de un categoria
     public Categoria getCategoria(Categoria categoria);
     
-    //Se obtiene un objeto de la tabla categoria 
-    //a partir del idCategoria que nos pasan
-    public  void delete(Categoria categoria);
-    
-    //Si idCategoria tiene un valor se actualiza 
-    //Si idCategoria NO tiene un valor no se actualiza
+    // Se inserta un nuevo categoria si el id del categoria esta vacío
+    // Se actualiza un categoria si el id del categoria NO esta vacío
     public void save(Categoria categoria);
     
-    
+    // Se elimina el categoria que tiene el id pasado por parámetro
+    public void delete(Categoria categoria);
 }
