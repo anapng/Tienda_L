@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
@@ -121,7 +122,7 @@
                           enctype="multipart/form-data">
                         <input type="hidden" name="idCategoria" th:field="*{idCategoria}"/>
                         <input type="hidden" name="rutaImagen" th:field="*{rutaImagen}"/>
-                        <section th:replace="~{categoria/fragmento :: botonesEditar}"/>
+                        <section th:replace="~{categoria/fragmentos :: botonesEditar}"/>
                         <div id=details>
                             <div class="container">
                                 <div class="row">

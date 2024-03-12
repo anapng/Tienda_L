@@ -40,7 +40,12 @@
                             <div class="modal-body">
                                 <div class="mb-3">
                                     <label for="categoria">[[#{producto.categoria}]]</label>
-                                    <input type="number" class="form-control" name="idCategoria" required="true"/>
+                                    <select> class= "form-select" 
+                                             aria-label = "Default select example"
+                                             name="categoria.idCategoria"
+                                             
+                                             </select>
+                                    <input type="number" class="form-control" name="categoria" required="true"/>
                                 </div>
                                 <div class="mb-3">
                                     <label for="activo">[[#{producto.activo}]]</label>
@@ -89,7 +94,7 @@
                                             <td>[[${producto.precio}]]</td>
                                             <td>[[${producto.existencias}]]</td>
                                             <td>[[${producto.precio*producto.existencias}]]</td>
-                                            <td>[[${producto.idCategoria}]]</td>
+                                            <td>[[${producto.categoria.descripcion}]]</td>
                                             <td th:text="${producto.activo} ? 'Activa' : 'Inactiva'" />
                                             <td><a th:href="@{/producto/eliminar/}+${producto.idProducto}"
                                                    class="btn btn-danger">
@@ -140,9 +145,9 @@
                                             </div>
                                             <div class="card-body">
                                                 <div class="mb-3">
-                                                    <label for="descripcion">[[#{producto.descripcion}]]</label>
+                                                    <label for="categoria">[[#{producto.categoria}]]</label>
                                                     <input type="text" class="form-control" 
-                                                           name="descripcion" th:field="*{descripcion}"
+                                                           name="categoria" th:field="*{categoria.idCategoria}"
                                                            required="true">
                                                 </div>
                                                 <div class="mb-3">
