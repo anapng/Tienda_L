@@ -9,6 +9,10 @@ import com.google.cloud.storage.Storage;
 import com.google.cloud.storage.Storage.SignUrlOption;
 import com.google.cloud.storage.StorageOptions;
 import com.tienda_L.service.FirebaseStorageService;
+import static com.tienda_L.service.FirebaseStorageService.BucketName;
+import static com.tienda_L.service.FirebaseStorageService.archivoJsonFile;
+import static com.tienda_L.service.FirebaseStorageService.rutaJsonFile;
+import static com.tienda_L.service.FirebaseStorageService.rutaSuperiorStorage;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -72,4 +76,4 @@ public class FirebaseStorageServiceImpl implements FirebaseStorageService {
     private String sacaNumero(long id) {
         return String.format("%019d", id);
     }
-}
+}               

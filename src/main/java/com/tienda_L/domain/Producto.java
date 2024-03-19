@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import lombok.Data;
 
-
 @Data
 @Entity
 @Table(name="producto")

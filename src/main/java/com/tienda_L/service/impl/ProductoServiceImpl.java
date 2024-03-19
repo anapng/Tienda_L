@@ -60,4 +60,16 @@ public class ProductoServiceImpl implements ProductoService {
         return productoDao.metodoJPQL(precioInf, precioSup);
     }
 
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> obtenerProductosOrdenadosAlfabeticamenteAscendente() {
+        return productoDao.findAllByOrderByDescripcionAsc();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> obtenerProductosOrdenadosAlfabeticamenteDescendente() {
+        return productoDao.findAllByOrderByDescripcionDesc();
+    }
+    
 }

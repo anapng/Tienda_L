@@ -32,4 +32,8 @@ public interface ProductoService {
     public List<Producto> metodoNativo (double precioInf, double precioSup) ;
     
     public List<Producto> metodoJPQL (double precioInf, double precioSup);
+    
+    public List<Producto> obtenerProductosOrdenadosAlfabeticamenteAscendente();
+    
+    public List<Producto> obtenerProductosOrdenadosAlfabeticamenteDescendente();
 }
