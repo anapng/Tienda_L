@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" 
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
       xmlns:th="http://www.thymeleaf.org">
@@ -60,7 +60,7 @@
                         
                         <ul class='navbar-nav' sec:authorize='isAuthenticated()'>
                             <li class='nav-item text-white my-auto'>
-                                <img th:href='@{${session.usuarioImagen}}'
+                                <img th:src='@{${session.usuarioImagen}}'
                                     alt='imagen'
                                     heigh ='40'
                                     class='rounded-circle'/>

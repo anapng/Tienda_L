@@ -40,6 +40,7 @@ public class UsuarioDetailsServiceImpl
             throw new UsernameNotFoundException(username);
         }
         
+        session.removeAttribute("usuarioImagen");
         session.setAttribute("usuarioImagen", usuario.getRutaImagen());
         
         var roles = new ArrayList<GrantedAuthority>();
