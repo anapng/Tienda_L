@@ -1,9 +1,3 @@
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/javascript.js to edit this template
- */
-
-
 /* La siguiente función se utiliza para visualizar la imagen seleccionada en la
  * página html donde se desea "cargar" utilizando un llamado "ajax"*/
 function readURL(input) {
